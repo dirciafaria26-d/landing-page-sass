@@ -1,0 +1,172 @@
+// 1. Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$dark-color: #212529;
+$light-bg: #f8f9fa;
+$white: #ffffff;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// 2. Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin button-style($bg, $color) {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: $bg;
+  color: $color;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// 3. Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  color: $dark-color;
+  line-height: 1.6;
+}
+
+// 4. Navigation & Header
+.header {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: $white;
+
+  .navbar {
+    @include flex-between;
+    padding: 20px 40px;
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+
+      a {
+        color: #e5e7eb;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .hero {
+    text-align: center;
+    padding: 70px 20px;
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #9ca3af;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// 5. Buttons
+.btn-primary {
+  @include button-style($primary-color, $white);
+}
+
+.btn-secondary {
+  @include button-style($secondary-color, $white);
+}
+
+// 6. Products Section
+.products {
+  padding: 60px 40px;
+  background-color: $light-bg;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .product-card {
+      background: $white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+      .product-thumb {
+        height: 130px;
+        background-color: #e5e7eb;
+        border-radius: 6px;
+        margin-bottom: 15px;
+      }
+
+      .price {
+        font-weight: 700;
+        color: $primary-color;
+        margin: 10px 0 15px;
+      }
+    }
+  }
+}
+
+// 7. Statistics Section
+.stats {
+  @include flex-center;
+  gap: 60px;
+  padding: 50px 20px;
+  background-color: $white;
+  text-align: center;
+
+  .stat-item {
+    h3 {
+      font-size: 2.2rem;
+      color: $primary-color;
+    }
+
+    p {
+      color: $secondary-color;
+    }
+  }
+}
+
+// 8. Footer
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #111827;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}

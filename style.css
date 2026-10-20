@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  line-height: 1.6;
+}
+
+.header {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #ffffff;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+.header .navbar .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.header .navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.header .navbar .nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+.header .navbar .nav-links a:hover {
+  color: #007bff;
+}
+.header .hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+.header .hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+.header .hero p {
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #6c757d;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-secondary:hover {
+  opacity: 0.85;
+}
+
+.products {
+  padding: 60px 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.products h2 {
+  margin-bottom: 35px;
+}
+.products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.products .product-grid .product-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.products .product-grid .product-card .product-thumb {
+  height: 130px;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.products .product-grid .product-card .price {
+  font-weight: 700;
+  color: #007bff;
+  margin: 10px 0 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.stats .stat-item h3 {
+  font-size: 2.2rem;
+  color: #007bff;
+}
+.stats .stat-item p {
+  color: #6c757d;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #111827;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=style.css.map */
